@@ -1,0 +1,270 @@
+<!-- save as index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ahmed — Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700;800&family=Inter:wght@300;400;600&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"/>
+    <meta
+      name="description"
+      content="Muhammad Ahmed — Designer & Frontend Developer. Crafting living interfaces with performance-first motion, cinematic type, and tactile interactions."
+    />
+    <meta name="author" content="Muhammad Ahmed" />
+    <meta
+      name="keywords"
+      content="Muhammad Ahmed, Portfolio, Designer, Frontend Developer, Motion Design, WebGL, UI/UX, Performance-First, Interactive Design"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a0a" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div id="portal">
+        <div class="halo"></div>
+        <div class="core"></div>
+      </div>
+      <h3>Ahmed — entering the studio</h3>
+    </div>
+
+    <canvas id="metaCanvas"></canvas>
+    <div class="vignette"></div>
+
+    <div class="cursor" id="cursor">
+      <svg viewBox="0 0 100 100" id="cursorSVG">
+        <defs>
+          <linearGradient id="cg" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#7c3aed" />
+            <stop offset="1" stop-color="#34d399" />
+          </linearGradient>
+        </defs>
+        <polygon
+          id="hex"
+          points="50,8 82,25 82,66 50,92 18,66 18,25"
+          fill="none"
+          stroke="url(#cg)"
+          stroke-width="3"
+          stroke-linejoin="round"
+        />
+        <circle cx="50" cy="50" r="6" fill="url(#cg)" />
+      </svg>
+      <div class="label" id="cursorLabel">Interact</div>
+    </div>
+
+    <div data-scroll-container>
+      <header data-scroll data-scroll-sticky>
+        <div class="brand">Muhammad Ahmed</div>
+        <nav>
+          <a href="main.html" data-scroll-to>Home</a>
+          <a href="#about" data-scroll-to>About</a>
+          <a href="#work" data-scroll-to>Work</a>
+          <a href="#contact" data-scroll-to>Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <section id="home" class="hero" data-scroll-section>
+          <div class="hero-left" data-scroll data-scroll-speed="0.9">
+            <div class="kicker">Designer • Frontend • Motion</div>
+            <h1 class="headline" id="headline">
+              I craft living interfaces bold, timeless, intentional.
+            </h1>
+            <p class="lead" id="lead">
+              Performance-first motion, cinematic type, tactile interactions. I
+              build products that feel alive without sacrificing speed or
+              accessibility.
+            </p>
+            <div class="cta">
+              <button class="btn primary" id="downloadResume">
+                Download Resume
+              </button>
+              <button class="btn" id="seeWorkBtn" data-scroll-to>
+                See Work
+              </button>
+            </div>
+          </div>
+          <div class="portrait-wrap" data-scroll data-scroll-speed="-0.4">
+            <div class="portrait" id="portrait">
+              <img src="assets/IMG_20250608_141531.jpg" alt="portrait" />
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about" data-scroll-section>
+          <div class="content">
+            <h2>About</h2>
+            <p>
+              Building delightful, resilient user experiences with an artisan
+              mindset. I ship pixel-perfect frontends, performance-first
+              systems, and brand stories that move people. I blend time-tested
+              design principles with motion and WebGL to tell your product story
+              with soul.
+            </p>
+          </div>
+          <!-- skills -->
+          <section id="skills" class="skills" data-scroll-section>
+            <div class="content">
+              <h2>Skills</h2>
+              <div class="skills-grid">
+                <div class="skill-card" data-skill="HTML">
+                  <img src="assets/HTML5.png" alt="HTML icon" />
+                  <span>HTML</span>
+                </div>
+                <div class="skill-card" data-skill="CSS">
+                  <img src="assets/css-3.png" alt="CSS icon" />
+                  <span>CSS</span>
+                </div>
+                <div class="skill-card" data-skill="JavaScript">
+                  <img src="assets/JavaScript.png" alt="JS icon" />
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-card" data-skill="React">
+                  <img src="assets/bootstrap.png" alt="bootstrap icons" />
+                  <span>BootStrap</span>
+                </div>
+                <div class="skill-card" data-skill="Node.js">
+                  <img src="assets/Tailwind CSS.png" alt="Tailwind icon" />
+                  <span>Tailwind CSS</span>
+                </div>
+                <div class="skill-card" data-skill="Git">
+                  <img src="assets/Git.png" alt="Git icon" />
+                  <span>Git</span>
+                </div>
+                <!-- more skill cards here -->
+              </div>
+            </div>
+            <div class="bg-typo" aria-hidden="true">
+              <div class="big-typo">Skills</div>
+            </div>
+          </section>
+
+          <div class="bg-typo" aria-hidden="true">
+            <div class="big-typo">Design</div>
+          </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work" class="projects" data-scroll-section>
+          <h2>aSelected Projects</h2>
+          <div class="swiper mySwiper" data-scroll data-scroll-speed="0.2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="slide-card"
+                  data-project='{"title":"Amnafloral Shop","desc":"Realtime UI & Motion System","img":"./assets/amna assets/amna.png.png"}'
+                >
+                  <div
+                    class="slide-thumb"
+                    style="
+                      background-image: url('./assets/amna assets/amna.png.png');
+                    "
+                  ></div>
+                  <h3>Amna Floral Shop</h3>
+                  <p style="color: var(--muted)">
+                    Realtime UI & custom animation system.
+                  </p>
+                  <button class="btn view">
+                    <a href="amna.html">View Case</a>
+                  </button>
+                  <button class="btn view" id="getcode">
+                    <a href=""><i class="ri-github-line"></i>Get Code</a>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="slide-card"
+                  data-project='{"title":"Project Beta","desc":"Design System & Tokens","img":"https://picsum.photos/1000/600?random=12"}'
+                >
+                  <div
+                    class="slide-thumb"
+                    style="
+                      background-image: url('https://picsum.photos/1000/600?random=12');
+                    "
+                  ></div>
+                  <h3>Project Beta</h3>
+                  <p style="color: var(--muted)">
+                    Design system, tokens & components.
+                  </p>
+                  <button class="btn view">View Case</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="slide-card"
+                  data-project='{"title":"Project Gamma","desc":"Performance-first SPA","img":"https://picsum.photos/1000/600?random=13"}'
+                >
+                  <div
+                    class="slide-thumb"
+                    style="
+                      background-image: url('https://picsum.photos/1000/600?random=13');
+                    "
+                  ></div>
+                  <h3>Project Gamma</h3>
+                  <p style="color: var(--muted)">
+                    Accessible, high-performance SPA.
+                  </p>
+                  <button class="btn view">View Case</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact" data-scroll-section>
+          <h2>Contact</h2>
+          <form class="contact-form" id="contactForm">
+            <input name="name" type="text" placeholder="Your name" required />
+            <input
+              name="email"
+              type="email"
+              placeholder="Your email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Tell me about your project"
+              rows="6"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+
+        <footer
+          style="
+            padding: 40px 6vw;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+          "
+        >
+          &copy;Muhammad Ahmed • 2025
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal" id="projectModal">
+      <div class="frame">
+        <button class="close" id="closeModal">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
